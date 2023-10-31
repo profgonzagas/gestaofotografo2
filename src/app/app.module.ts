@@ -1,26 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router'; // Importe o módulo RouterModule
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContatoComponent } from './contato/contato.component';
-import { HomeComponent } from './home/home.component';
-import { SobreComponent } from './sobre/sobre.component';
-import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { MenuComponent } from './menu/menu.component';
+import { FooterComponent} from './footer/footer.component';
+import { DonationComponent } from './donation/donation.component';
+
+
+import { HomeComponent } from './home/home.component'; // Substitua 'home' pelo caminho correto
+import { SobreComponent } from './sobre/sobre.component'; // Substitua 'sobre' pelo caminho correto
+import { ContatoComponent } from './contato/contato.component'; // Substitua 'contato' pelo caminho correto
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContatoComponent,
-    HomeComponent,
-    SobreComponent,
-    LoginComponent,
-    NavbarComponent
+    MenuComponent,
+    FooterComponent,
+    DonationComponent,
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpClientModule,
+    
+    RouterModule.forRoot([ // Use um array para definir as rotas
+      { path: '', component: HomeComponent },
+      { path: 'sobre', component: SobreComponent },
+      { path: 'contato', component: ContatoComponent }
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
