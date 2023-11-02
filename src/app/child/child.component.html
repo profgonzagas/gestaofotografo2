@@ -1,0 +1,15 @@
+<p>child works!</p>
+
+
+<div class="input-group mt-4">
+    <input #valores type="text" class="form-control">
+    <button
+        (click)="enviarData(valores.value)"
+        class="btn btn-info"
+        type="button"
+    >
+        Enviar Dados
+    </button>
+</div>
+<h3>Filho é {{data}}</h3>
+<h3>Filha é {{eventoEnviarData}}</h3>

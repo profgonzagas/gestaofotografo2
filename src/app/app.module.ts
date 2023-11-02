@@ -1,3 +1,5 @@
+import { LoginComponent } from './login/login.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -12,7 +14,11 @@ import { DonationComponent } from './donation/donation.component';
 
 import { HomeComponent } from './home/home.component'; // Substitua 'home' pelo caminho correto
 import { SobreComponent } from './sobre/sobre.component'; // Substitua 'sobre' pelo caminho correto
-import { ContatoComponent } from './contato/contato.component'; // Substitua 'contato' pelo caminho correto
+
+import { ContatoComponent } from './contato/contato.component';
+import { ChildComponent } from './child/child.component';
+import { FatherComponent } from './father/father.component';
+import { ButtonComponent } from './button/button.component'; // Substitua 'contato' pelo caminho correto
 
 @NgModule({
   declarations: [
@@ -20,6 +26,9 @@ import { ContatoComponent } from './contato/contato.component'; // Substitua 'co
     MenuComponent,
     FooterComponent,
     DonationComponent,
+    ChildComponent,
+    FatherComponent,
+    ButtonComponent,
    
   ],
   imports: [
@@ -28,9 +37,12 @@ import { ContatoComponent } from './contato/contato.component'; // Substitua 'co
     HttpClientModule,
     
     RouterModule.forRoot([ // Use um array para definir as rotas
-      { path: '', component: HomeComponent },
+     // { path: '', component: HomeComponent },
       { path: 'sobre', component: SobreComponent },
-      { path: 'contato', component: ContatoComponent }
+      { path: 'contato', component: ContatoComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'login', component: LoginComponent }
+      
     ]),
   ],
   providers: [],

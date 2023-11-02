@@ -1,0 +1,19 @@
+<p>father works!</p>
+<div class="card mt-5">
+    <div class="card-header bg-dark text-white">
+      Componente PAI
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Cores</h5>
+
+        <ul class="list-group">
+            <li *ngFor="let color of arrayCores" class="list-group-item">
+                 {{color}}
+            </li>  
+                      
+        </ul>
+
+      <app-child
+        (eventoEnviarData)="agregarArray($event)"> </app-child>
+    </div>
+  </div>
