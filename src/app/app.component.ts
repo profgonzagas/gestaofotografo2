@@ -1,7 +1,8 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-import * as M from 'materialize-css'; // Importe o Materialize CSS
+import * as M from 'materialize-css'; 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { LocalStorageService } from './local-storage.service';  // Corrigido o caminho de importação
+
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,10 @@ export class AppComponent implements AfterViewInit {
   title = 'gestaofotografo';
   inputname = '';
   formulario: FormGroup;
-  resultadoLocalStorage: any; // Corrigido: Adicionando a propriedade aqui
+  resultadoLocalStorage: any; 
   mostrarResultado: boolean = false;
+  today: Date = new Date();
+  username: string = '';
 
   constructor(private fb: FormBuilder, private localStorageService: LocalStorageService) {
     this.formulario = this.fb.group({
@@ -24,7 +27,10 @@ export class AppComponent implements AfterViewInit {
       senha: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)]],
     });
   }
-
+  
+  onUsernameInput(event: any): void {
+    this.username = event.target.value.toUpperCase();
+  }
   TranferData(name: any) {
     this.inputname = name;
   }
@@ -65,4 +71,7 @@ export class AppComponent implements AfterViewInit {
     // Limpando o LocalStorage
     this.localStorageService.clear();
   }
+  
+
+
 }

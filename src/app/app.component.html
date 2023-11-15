@@ -1,30 +1,38 @@
 
+
 <header> <app-menu></app-menu></header>
+
+<app-crud></app-crud>
+
+
+
 
 
 
 <a [routerLink]="['/home']">Home</a>
 <a [routerLink]="['/login']">Login</a>
 
-<!-- Seu arquivo.html -->
 
-<!-- Seu arquivo.html -->
+
+
 
 <main>
   <router-outlet></router-outlet>
 
   <form [formGroup]="formulario">
-    <input id="nome" type="text" class="form-control" formControlName="nome" placeholder="Nome">
+    <input id="nome" type="text" class="form-control" formControlName="nome"  placeholder="Nome" >
     <div *ngIf="formulario.get('nome')?.errors?.['required'] && formulario.get('nome')?.touched" class="text-danger">
       Nome obrigatório
     </div>
 
-    <!-- Adicione o botão para chamar o método testLocalStorage() -->
+  
     <button (click)="testLocalStorage()">Testar LocalStorage</button>
 
-    <!-- Seu código HTML continua aqui -->
+    
 
-    <input id="username" type="text" class="form-control" formControlName="username" placeholder="Username">
+    <input id="username" type="text" class="form-control" formControlName="username" placeholder="Username" >
+
+
     <div *ngIf="formulario.get('email')?.errors?.['required'] && formulario.get('email')?.touched" class="text-danger">
       Email obrigatório
     </div>
@@ -51,6 +59,7 @@
 
 
 
+
 <!-- <app-donation></app-donation>
 <app-button></app-button> 
 
@@ -58,6 +67,7 @@
   <app-father> Pai rodando</app-father>
 </div> -->
 
- 
+
+
 
 <app-footer></app-footer>

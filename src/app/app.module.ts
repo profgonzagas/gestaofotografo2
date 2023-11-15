@@ -2,7 +2,7 @@ import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -16,6 +16,10 @@ import { ChildComponent } from './child/child.component';
 import { FatherComponent } from './father/father.component';
 import { ButtonComponent } from './button/button.component';
 
+import { CamelCasePipe } from './camel-case.pipe';
+import { CrudComponent } from './componentes/crud/crud.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 
@@ -28,6 +32,9 @@ import { ButtonComponent } from './button/button.component';
     ChildComponent,
     FatherComponent,
     ButtonComponent,
+   
+    CamelCasePipe,
+         CrudComponent,
     
    
   ],
@@ -36,6 +43,7 @@ import { ButtonComponent } from './button/button.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AppRoutingModule,
    
     
 
@@ -48,7 +56,7 @@ import { ButtonComponent } from './button/button.component';
       
     ]),
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
