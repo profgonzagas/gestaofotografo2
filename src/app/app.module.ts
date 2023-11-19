@@ -19,7 +19,14 @@ import { ButtonComponent } from './button/button.component';
 import { CamelCasePipe } from './camel-case.pipe';
 import { CrudComponent } from './componentes/crud/crud.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { MatMenuTrigger } from '@angular/material/menu';
+import { ServicosComponent } from './servicos/servicos.component';
+import { BlogComponent } from './blog/blog.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 
@@ -32,9 +39,14 @@ import { AppRoutingModule } from './app-routing.module';
     ChildComponent,
     FatherComponent,
     ButtonComponent,
+    
    
     CamelCasePipe,
          CrudComponent,
+         ContatoComponent,
+         ServicosComponent,
+         BlogComponent,
+         PortfolioComponent,
     
    
   ],
@@ -44,19 +56,23 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-   
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
     
 
-    RouterModule.forRoot([ // Use um array para definir as rotas
-     // { path: '', component: HomeComponent },
+    RouterModule.forRoot([ 
+      { path: '', component: HomeComponent },
       { path: 'sobre', component: SobreComponent },
       { path: 'contato', component: ContatoComponent },
-      { path: 'home', component: HomeComponent },
-      { path: 'login', component: LoginComponent }
+      { path: 'portfolio', component: PortfolioComponent },
+      { path: 'servicos', component: ServicosComponent },
+      { path: 'blog', component: BlogComponent },
       
     ]),
+                 BrowserAnimationsModule,
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, MatMenuTrigger],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,7 +9,7 @@ export class ButtonComponent {
   @ViewChild('myButton') myButton!: ElementRef;
 
   constructor() {
-    // Não é necessário inicializar myButton aqui.
+    
   }
 
   handleClick() {

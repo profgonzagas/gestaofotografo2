@@ -1,33 +1,53 @@
-# Projeto Gestaofotografos
+# Projeto Gestaofotografo
 
-Este projeto foi desenvolvido como parte da disciplina de Framewrks da Pós-Graduação em Java na UTFPR. O objetivo é criar uma aplicação de gestão de fotógrafos, que atenda a diversos requisitos e utilize conceitos de desenvolvimento web com frameworks em Angular.
+FotógrafoPro é uma aplicação web projetada para ajudar fotógrafos a gerenciar seus negócios, clientes e galerias de fotos. A aplicação permitirá que fotógrafos organizem e exibam seu portfólio, gerenciem contratos e calendários e comuniquem-se com clientes.
 
-## Checklist de Tarefas
+## Tópicos/Checklist
 
-Aqui está a lista de tarefas a serem concluídas durante o desenvolvimento deste projeto:
+### Versionamento e Estrutura do Projeto
 
-- [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop.
-- [x] Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro).
-- [x] Apresentar as telas com layout responsivo usando ou não algum framework CSS.
-- [x] Construir páginas web com o conceito de componentes.
-- [x] Criar o layout da aplicação com componentes, ou seja, o cabeçalho e rodapé precisam ser componentes.
-- [x] Usar pelo menos dois tipos de data-binding (Interpolation, Property Binding, Event Binding e Two Way Data Binding).
-- [x] Passar dados via hierarquia de componentes, ou seja, usando @Input ou @Output.
-- [x] Mapear componentes à rotas no módulo de rotas.
-- [x] Criar navegação entre páginas por meio de rotas.
-- [x] Passar dados entre componentes que representam diferentes telas via parâmetros de rotas.
-- [x] Validar campos do formulário com REGEX e apresentar os erros.
-- [x] Desabilitar o botão de submit enquanto o formulário está inválido.
-- [ ] Fazer requisições a API com tratamento da resposta com Promises ou Observables.
-- [ ] Cadastrar uma entidade usando uma API (JSON Server).
-- [x] Apresentar uma lista de dados com a diretiva estrutural ngFor.
-- [x] Usar a diretiva ngIf.
-- [x] Formatar a apresentação de dados com Pipes.
-- [ ] Build e deploy da aplicação.
+- [x] Criar um repositório no GitHub com a estrutura do Gitflow, incluindo pelo menos as branches principais "main" e "develop."
 
-## Como Marcar Tarefas
+### Estilo e Layout
 
-Para marcar uma tarefa como concluída, basta adicionar um "x" dentro dos colchetes, como mostrado no exemplo da primeira tarefa. Conforme você for progredindo no desenvolvimento do projeto, vá marcando as tarefas concluídas para acompanhar o andamento.
+- [x] Utilizar componentes de um framework CSS, como Bootstrap, Materialize ou outro à sua escolha.
+- [x] Apresentar as telas com layout responsivo, adaptando-se a diferentes tamanhos de tela, usando um framework CSS ou implementações personalizadas.
+- [x] Desenvolver o layout da aplicação com componentes, tornando o cabeçalho e o rodapé componentes reutilizáveis.
 
-Boa sorte com o desenvolvimento do projeto Gestaofotografos!
+### Data-Binding e Interatividade
+
+- [x] Aplicar pelo menos dois tipos de data-binding, como Interpolation, Property Binding, Event Binding, Two-Way Data Binding.
+- [x] Empregar variáveis de template e a anotação ViewChild para interagir com elementos do DOM ou componentes diretamente no template ou no código TypeScript do aplicativo.
+- [] Estabelecer a passagem de dados entre componentes por meio da hierarquia de componentes, empregando as anotações @Input e @Output.
+- [ ] Transferir dados, por meio de serviços, entre componentes que não estão diretamente relacionados.
+
+### Navegação
+
+- [x] Mapear os componentes às rotas no módulo de rotas, criando uma estrutura de navegação eficiente.
+- [x] Permitir a navegação fluida entre as diferentes páginas do aplicativo por meio de links e botões de navegação.
+
+### Validação de Formulário e Interação com a API
+
+- [x] Validar os campos do formulário com expressões regulares (REGEX) e apresentar as mensagens de erro.
+- [x] Implementar máscaras em campos de formulário, quando necessário, para melhorar a experiência do usuário ao inserir dados.
+- [x] Desabilitar o botão de envio (submit) enquanto o formulário estiver em um estado inválido.
+- [x] Realizar requisições à API com tratamento adequado das respostas de sucesso e erro com Promises.
+- [x] Realizar requisições à API com tratamento adequado das respostas de sucesso e erro com Observables.
+- [ ] Criar o cadastro completo de uma entidade, incluindo operações de criação, leitura, atualização e exclusão (CRUD) utilizando uma API, como o JSON Server.
+- [x] Utilizar o armazenamento local (LocalStorage ou SessionStorage) para armazenar dados temporários, quando necessário.
+
+### Apresentação de Dados
+
+- [x] Aplicar a diretiva estrutural ngFor para apresentar uma lista dinâmica de dados em seu aplicativo.
+- [x] Utilizar a diretiva ngIf para controlar a exibição ou ocultação de elementos com base em condições específicas.
+- [x] Formatar a apresentação de dados com Pipes, de acordo com os requisitos do aplicativo.
+
+### Build e Deploy
+
+- [x] Executar o processo de build da aplicação.
+- [x] Realizar o deploy para tornar o aplicativo acessível online.
+
+
+
+
 

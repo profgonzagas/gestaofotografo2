@@ -1,7 +1,38 @@
 <p>menu works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">Gestão Fotografo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/sobre'">Sobre</a>
+        </li>
+        <li class="nav-item">          
+          <a class="nav-link" [routerLink]="'/portfolio'">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/servicos'">Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/blog'">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/contato'">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!--
 <div class="nav-fixed" style="z-index: 1001 !important">
-
-
     <nav class="nav-extended">
         <div class="nav-wrapper">
           <a href="#" class="brand-logo">Logo</a>
@@ -19,6 +50,7 @@
       </nav>
     
       <ul class="sidenav" id="mobile-demo">    
+        
 
         <li><a href="contato.html" >Contato</a></li>
         <li><a href="home.html" >Home</a></li>
@@ -26,8 +58,7 @@
         <li><a href="sobre.html" >Sobre</a></li>
       </ul>
     
-      <div id="test1" class="col s12">Test 1</div>
-      <div id="test2" class="col s12">Test 2</div>
-      <div id="test3" class="col s12">Test 3</div>
-      <div id="test4" class="col s12">Test 4</div>
+      
 </div>
+-->
+

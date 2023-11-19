@@ -1,17 +1,7 @@
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 <header> <app-menu></app-menu></header>
-
-<app-crud></app-crud>
-
-
-
-
-
-
-<a [routerLink]="['/home']">Home</a>
-<a [routerLink]="['/login']">Login</a>
-
 
 
 
@@ -24,14 +14,10 @@
     <div *ngIf="formulario.get('nome')?.errors?.['required'] && formulario.get('nome')?.touched" class="text-danger">
       Nome obrigatório
     </div>
-
   
-    <button (click)="testLocalStorage()">Testar LocalStorage</button>
-
-    
+  
 
     <input id="username" type="text" class="form-control" formControlName="username" placeholder="Username" >
-
 
     <div *ngIf="formulario.get('email')?.errors?.['required'] && formulario.get('email')?.touched" class="text-danger">
       Email obrigatório
@@ -50,24 +36,20 @@
     <button [disabled]="!formulario.valid" (click)="cadastrarUsuario()">
       Cadastre-se
     </button>
+    <button (click)="testLocalStorage()">Testar LocalStorage</button>    
     <div *ngIf="mostrarResultado">
       <p>Resultado do LocalStorage: {{ resultadoLocalStorage | json }}</p>
     </div>
   </form>
 </main>
 
-
-
-
-
-<!-- <app-donation></app-donation>
+ <app-donation></app-donation>
 <app-button></app-button> 
 
 <div class="container">  
   <app-father> Pai rodando</app-father>
-</div> -->
-
-
-
-
+</div> 
+<app-crud></app-crud>
 <app-footer></app-footer>
+
+

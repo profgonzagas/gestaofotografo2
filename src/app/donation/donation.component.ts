@@ -19,20 +19,20 @@ export class DonationComponent {
     this.name = numericValue; // Atualiza o modelo com o valor numérico
   }
   onSubmit() {
-    // Handle form submission here
+    
     if (this.name !== '') {
-      // Do something with the name, e.g., submit it to a server or perform other actions.
+     
       console.log(`Name submitted: ${this.name}`);
     }
   }
   onResetClick() {
-    // Implemente a lógica para redefinir o valor aqui
+   
   }
 
   constructor() {}
 
   processDonation() {
-    // adicionar a lógica para processar a doação.
+    
   
     console.log(`Doação de ${this.donationAmount} realizada.`);
   }

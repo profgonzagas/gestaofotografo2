@@ -1,0 +1,14 @@
+<p>portfolio works!</p>
+
+
+<section class="portfolio-container">
+    <div class="portfolio-item" *ngFor="let item of portfolioItems">
+      <img [src]="item.image" alt="{{ item.title }}">
+      <div class="item-details">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <a [href]="item.link" target="_blank" class="view-more-link">Ver Mais</a>
+      </div>
+    </div>
+  </section>
+  

@@ -1,4 +1,4 @@
-// Função para exibir detalhes do usuário
+
 async function showUserDetails(userId) {
     try {
         const response = await fetch(`https://reqres.in/api/users/${userId}`);
@@ -27,7 +27,7 @@ async function showUserDetails(userId) {
     }
 }
 
-// Função para exibir um alerta
+
 function showUserDetailsAlert() {
     alert('Button clicked!');
 }

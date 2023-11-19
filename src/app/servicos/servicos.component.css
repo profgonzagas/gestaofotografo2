@@ -1,0 +1,41 @@
+
+
+.services-container {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .service {
+    margin-bottom: 40px;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .price {
+    font-size: 1.3rem;
+    color: #007bff; 
+  }
+  
