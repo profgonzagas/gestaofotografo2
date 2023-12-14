@@ -1,14 +1,14 @@
 <p>crud works!</p>
+<h1> Temos fotos nos seguintes formatos:</h1>
 
 <div *ngFor="let i of images; let first = first; let last = last; let odd = odd; index as idx">
-  <div *ngIf="idx < 1">
-    <h1> ID: {{ i.id | number }}</h1>
+  <div *ngIf="idx < 2">
+    <h1>ID: {{ i.id | number }}</h1>
+    <p>Album ID: {{ i.albumId | number }}</p>
+    <p>Title: {{ i.title | uppercase }}</p>
+    <img [src]="i.url" alt="Imagem {{ i.id }}" style="max-width: 20%; height: auto;">
    
-    <p> Album ID: {{ i.albumId | number }}</p>
-    <p> Title: {{ i.title | uppercase}}</p>
-    <p> URL: {{ i.url | lowercase}}</p>
-    <p> Thumbnail URL: {{ i.thumbnailUrl | lowercase }}</p>
-    
+    <p>Thumbnail URL: {{ i.thumbnailUrl | lowercase }}</p>
   </div>
 </div>
 

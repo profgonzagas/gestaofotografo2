@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 export class PortfolioComponent {
   portfolioItems = [
     {
-      title: 'Projeto 1',
-      description: 'Descrição do projeto 1...',
-      image: 'url_da_imagem_1',
+      title: 'Casamento',
+      description: 'Realizamos seu casamento',
+      image: 'assets/casamento.jpg',
       link: 'link_para_detalhes_1'
     },
     {
-      title: 'Projeto 2',
-      description: 'Descrição do projeto 2...',
-      image: 'url_da_imagem_2',
+      title: 'Festas',
+      description: 'Registramos sua festa',
+      image: 'assets/festas.jpg',
       link: 'link_para_detalhes_2'
     },
    
