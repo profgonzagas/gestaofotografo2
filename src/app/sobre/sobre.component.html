@@ -7,3 +7,42 @@
     <p>Minha missão é não apenas capturar momentos, mas criar experiências visuais que perduram ao longo do tempo. Estou comprometido em oferecer serviços de alta qualidade, personalizados para atender às necessidades individuais de cada cliente.</p>
     <p>Se você está procurando um profissional apaixonado pela arte da fotografia, estou aqui para transformar suas ideias em imagens extraordinárias. Obrigado por considerar meu trabalho e estou ansioso para colaborar em seu próximo projeto fotográfico.</p>
   </div>
+<br>
+<br>
+<br>
+<br>
+<h1>Cadastre-se para receber notícias</h1>
+  <form [formGroup]="formGroup">
+    <input id="nome" type="text" class="form-control" formControlName="username" placeholder="Nome">
+    <div *ngIf="formGroup.get('username')?.errors?.['required'] && formGroup.get('username')?.touched" class="text-danger">
+      Nome obrigatório
+    </div>
+  
+   
+  
+    <input id="username" type="text" class="form-control" formControlName="email" placeholder="Username">
+    <div *ngIf="formGroup.get('email')?.errors?.['required'] && formGroup.get('email')?.touched" class="text-danger">
+      Email obrigatório
+    </div>
+    <div *ngIf="formGroup.get('email')?.errors?.['pattern']" class="text-danger">
+      Email inválido
+    </div>
+  
+    <input id="email" type="email" class="form-control" formControlName="email" placeholder="Email">
+    <div *ngIf="formGroup.get('senha')?.errors?.['required'] && formGroup.get('senha')?.touched" class="text-danger">
+      Senha obrigatória
+    </div>
+    <div *ngIf="formGroup.get('senha')?.errors?.['pattern']" class="text-danger">
+      Senha inválida (mínimo de 8 caracteres, pelo menos uma letra e um número)
+    </div>
+  
+    <input id="senha" type="password" class="form-control" formControlName="senha" placeholder="Senha">
+    <button [disabled]="!formGroup.valid" (click)="cadastrarUsuario()">
+      Cadastre-se1
+    </button>
+  
+    <div *ngIf="mostrarResultado">
+      <p>Resultado do LocalStorage: {{ resultadoLocalStorage | json }}</p>
+    </div>
+  </form>
+  

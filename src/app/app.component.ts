@@ -1,8 +1,8 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import * as M from 'materialize-css'; 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { LocalStorageService } from './local-storage.service';  // Corrigido o caminho de importação
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,15 +18,17 @@ export class AppComponent implements AfterViewInit {
   mostrarResultado: boolean = false;
   today: Date = new Date();
   username: string = '';
+ 
 
-  constructor(private fb: FormBuilder, private localStorageService: LocalStorageService) {
+  constructor(private fb: FormBuilder, private localStorageService: LocalStorageService, private route: ActivatedRoute) {
     this.formulario = this.fb.group({
-      nome: ['', Validators.required],
+      
       username: [''],
       email: ['', [Validators.required, Validators.email]],
       senha: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)]],
     });
   }
+  
   
   onUsernameInput(event: any): void {
     this.username = event.target.value.toUpperCase();
@@ -70,7 +72,13 @@ export class AppComponent implements AfterViewInit {
 
     // Limpando o LocalStorage
     this.localStorageService.clear();
+
+
   }
+
+ 
+  
+  
   
 
 
