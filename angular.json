@@ -102,6 +102,12 @@
               "node_modules/materialize-css/dist/js/materialize.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/gestaofotografo/"
+          },
         }
       }
     }

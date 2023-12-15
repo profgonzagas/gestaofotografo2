@@ -52,7 +52,7 @@ FotógrafoPro é uma aplicação web projetada para ajudar fotógrafos a gerenci
 Protótipos das telas: https://www.figma.com/file/QeOi5NjozXceXmKkMza2Sa/Telasv2?type=design&node-id=0%3A1&mode=design
 Projeto completo: https://drive.google.com/drive/folders/1K8cmYHHv4dL9irKIXBZHmw5OP-o8i0lb?usp=sharing
 Explicação do Projeto YT:https://youtu.be/f9g9gNLasGI
-Site: https://profgonzagas.github.io/gestaofotografo/
+Site: https://github.com/profgonzagas/gestaofotografo2
 
 
 
